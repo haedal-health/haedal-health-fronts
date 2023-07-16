@@ -1,0 +1,21 @@
+$main-color: #00A1F2;
+$sub-color: #5DBAFF;
+$background-color : #E5F4FF;
+$point-color : #4F616D;
+$point-color2 : #B6DAF4;
+$point-color3: #D10C0C;
+$page-padding: 100px;
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.Main-wrapper{
+  position: relative;
+  width: 100%;
+  margin-top: 5rem;
+  height: 1vh;
+}

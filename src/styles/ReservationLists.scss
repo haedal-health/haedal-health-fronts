@@ -1,0 +1,177 @@
+/* ReservationList */
+
+$container-width: 410px;
+
+.font1{
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.font2{
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  color: #F1F2F3;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ReservationList{
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  background: none;
+}
+
+
+/* ReservationList-wrapper */
+
+.ReservationList-wrapper {
+  position: absolute;
+  width: $container-width;
+  height: 572px;
+  left: 203px;
+  top: 252px;
+  background: #FFFFFF;
+  border: 1px solid #00A1F2;
+  border-radius: 5px;
+  margin: auto 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+/* ReservationList-container */
+
+.ReservationList-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px;
+  gap: 30px;
+  left: calc(50% - 318px/2 - 307px);
+  top: 296px;
+}
+
+/* ReservationList-item */
+
+.ReservationList-item {
+  width: 318px;
+  height: 63px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: #E5F4FF;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* ReservationList-item-text */
+
+.ReservationList-item-text {
+  position: absolute;
+  width: 226px;
+
+
+  text-align: center;
+  color: #000000;
+}
+
+
+/* ReservationList-pageIndicator-container */
+
+.ReservationList-pageIndicator-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 13px;
+  position: absolute;
+  width: $container-width;
+  height: 3px;
+  left: calc(50% - #{$container-width}/2 - 312px);
+  top: 807px;
+}
+
+/* ReservationList-pageIndicator-dot */
+
+.ReservationList-pageIndicator-dot {
+  width: 41px;
+  height: 4px;
+  background: #D9D9D9;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* ReservationList-pageIndicator-activeDot */
+
+.ReservationList-pageIndicator-activeDot {
+  width: 41px;
+  height: 4px;
+  background: #A9A9A9;
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+/* ReservationList-rightBtn */
+.ReservationList-rightBtn {
+  position: absolute;
+  width: 23px;
+  height: 30px;
+  right: 0px;
+}
+
+/* ReservationList-leftBtn */
+.ReservationList-leftBtn {
+  position: absolute;
+  width: 23px;
+  height: 30px;
+  left: 0px;
+}
+
+/* ReservationList-item-btn-groups */
+
+.ReservationList-item-btn-groups{
+  position: absolute;
+  width: 75px;
+  height: 41px;
+  right: 1rem;
+  background: #4F616D;
+  border-radius: 5px;
+  }
+  
+  /* ReservationList-item-btn-text */
+  
+  .ReservationList-item-btn-text {
+  width: 75px;
+  height: 41px;
+  }
+
+  .active{
+    background: #00A1F2;
+  }

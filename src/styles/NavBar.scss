@@ -1,0 +1,283 @@
+$main-color: #00A1F2;
+$sub-color: #5DBAFF;
+$background-color : #E5F4FF;
+$point-color : #4F616D;
+$point-color2 : #B6DAF4;
+$point-color3: #D10C0C;
+$page-padding: 100px;
+
+/* NavBar-wrapper */
+
+.NavBar-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 124px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+
+/* NavBar-detail */
+
+.NavBar-detail {
+  position: absolute;
+  width: 247px;
+  height: 25px;
+  left: 1003px;
+  top: 32px;
+}
+
+
+/* NavBar-detail-text */
+
+.NavBar-detail-text {
+  position: absolute;
+  width: 57px;
+  height: 25px;
+  left: 1084px;
+  top: 32px;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #000000;
+}
+
+
+/* NavBar-detail-text */
+
+.NavBar-detail-text {
+  position: absolute;
+  width: 77px;
+  height: 25px;
+  left: 1165px;
+  top: 32px;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #000000;
+}
+
+
+/* NavBar-detail-text */
+
+.NavBar-detail-text {
+  position: absolute;
+  width: 51px;
+  height: 24px;
+  left: 1003px;
+  top: 32px;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #000000;
+}
+
+
+/* NavBar-detail-line */
+
+.NavBar-detail-line {
+  position: absolute;
+  width: 13px;
+  height: 0px;
+  left: 1070px;
+  top: 38px;
+
+  border: 1px solid #D9D9D9;
+  transform: rotate(90deg);
+}
+
+
+/* NavBar-detail-line */
+
+.NavBar-detail-line {
+  position: absolute;
+  width: 13px;
+  height: 0px;
+  left: 1153px;
+  top: 38px;
+
+  border: 1px solid #D9D9D9;
+  transform: rotate(90deg);
+}
+
+
+/* NavBar-detail-btn */
+
+.NavBar-detail-btn {
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  left: 1250px;
+  top: 48px;
+
+  background: #333333;
+  transform: rotate(-180deg);
+}
+
+
+/* NavBar-container */
+
+.NavBar-container {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 100%;
+  height: 51px;
+  top: 57px;
+
+  padding: 0 100px;
+
+  /* NavBar-purchase */
+
+  .NavBar-purchase {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    //left: calc(50% - 26px/2 + 545px);
+    //top: calc(50% - 26px/2 + 0px);
+
+    right: $page-padding + 0px;
+  }
+
+
+  /* NavBar-bookmark */
+
+  .NavBar-bookmark {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+
+    right: $page-padding + 50px;
+  }
+
+
+  /* NavBar-text */
+  .NavBar-text {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    /* 해달헬스 */
+
+    .text1 {
+      position: absolute;
+      width: 75px;
+      height: 24px;
+      left: 347px;
+
+      color: #00A1F2;
+    }
+
+
+    /* 해달뷰티 */
+    .text2 {
+      position: absolute;
+      width: 95px;
+      height: 24px;
+      left: 434px;
+
+      color: rgba(51, 51, 51, 0.3);
+    }
+
+
+
+  }
+
+
+
+  /* NavBar-Logo */
+
+  .NavBar-Logo {
+    position: absolute;
+    width: 179.78px;
+    height: 50px;
+    left: 162px;
+
+    //background: url(image.png);
+    background-blend-mode: darken;
+  }
+
+
+
+}
+
+
+/* NavBar-item */
+
+.NavBar-item {
+  position: absolute;
+  width: 392px;
+  height: 48px;
+  left: 565px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+/* NavBar-search */
+
+.NavBar-search {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 392px;
+  height: 48px;
+
+  background: #FFFFFF;
+  border: 1px solid #00A1F2;
+  border-radius: 5px;
+}
+
+
+/* NavBar-search-icon */
+
+.NavBar-search-icon {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+
+  right: 1rem;
+}
+
+
+  /* NavBar-searchtext */
+
+  .NavBar-searchtext {
+
+    position: absolute;
+    height: 24px;
+    left: 1rem;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(51, 51, 51, 0.3);
+  }
+
+}

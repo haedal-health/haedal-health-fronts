@@ -1,0 +1,211 @@
+$main-color: #00A1F2;
+$sub-color: #5DBAFF;
+$background-color : #E5F4FF;
+$point-color : #4F616D;
+$point-color2 : #B6DAF4;
+$point-color3: #D10C0C;
+$background-color2:#EAF4FC;
+$page-padding: 100px;
+
+.titlefont1{
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #FFFFFF;
+
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ReservationDetails */
+.ReservationDetails {
+  
+}
+  
+  /* ReservationDetails-wrapper */
+  .ReservationDetails-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    width: 571px;
+    height: 778px;
+    left: 681px;
+    top: 46px;
+    background: #FFFFFF;
+    border: 1px solid #00A1F2;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+  }
+  
+  /* ReservationDetails-container */
+  .ReservationDetails-container {
+  width: 508px;
+  height: 53 + 123px;
+
+  top: 100px;
+
+  position: relative;
+  }
+  
+  /* ReservationDetails-title */
+.ReservationDetails-title{
+position: absolute;
+width: 571px;
+height: 57px;
+left: 0px;
+top: 0px;
+
+background: #5DBAFF;
+
+}
+
+
+  /* ReservationDetails-title-groups */
+  .ReservationDetails-title-groups {
+  position: relative;
+  width: 507px;
+  height: 53px;
+  background: $point-color2;
+  border-radius: 5px;
+
+  }
+
+/* ReservationDetails-text */
+.ReservationDetails-text{
+
+position: relative;
+width: 464px;
+height: 38px;
+left: 1rem;
+
+}
+
+  /* ReservationDetails-item-groups */
+  .ReservationDetails-item-groups {
+  position: relative;
+  width: 507px;
+  height: 123px;
+
+  background: $background-color2;
+  border-radius: 5px;
+  }
+  
+  /* ReservationDetails-item-detail */
+  .ReservationDetails-item-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+  position: absolute;
+  width: 290px;
+  height: 110px;
+  left: 33px;
+  top: 53px;
+  }
+  
+  /* ReservationDetails-item-detail-text */
+  .ReservationDetails-item-detail-text {
+  width: 238px;
+  height: 20px;
+  }
+  
+  
+  
+  /* ReservationDetails-item-title */
+  .ReservationDetails-item-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+  position: absolute;
+  width: 485px;
+  height: 34px;
+  left: 10px;
+  top: 9px;
+  }
+  
+  /* ReservationDetails-item-title-text */
+  .ReservationDetails-item-title-text {
+  width: 404px;
+  height: 38px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  }
+  
+  /* ReservationDetails-item-btn-groups */
+  .ReservationDetails-item-btn-groups {
+  width: 75px;
+  height: 35px;
+  }
+  
+  /* ReservationDetails-item-btn */
+  .ReservationDetails-item-btn {
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  left: 410px;
+  top: -0.5px;
+  background: #00A1F2;
+  border-radius: 5px;
+  }
+  
+  /* ReservationDetails-item-btn-text */
+  .ReservationDetails-item-btn-text {
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  left: 410px;
+  top: -0.5px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #F1F2F3;
+  }
+
+  /* ReservationDetails-title-btn-groups */
+.ReservationDetails-title-btn-groups {
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  right: 1rem;
+  background: #D10C0C;
+  border-radius: 5px;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #F1F2F3;
+  }
