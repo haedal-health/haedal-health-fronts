@@ -4,6 +4,8 @@ import ReservationDetails from "../components/ReservationDetails";
 import Footer from "../components/Footer";
 import Profile from "../components/Profile";
 
+import LoginComponents from "../components/LoginComponent";
+
 import "../styles/index.scss";
 
 export default function Login() {
@@ -12,7 +14,7 @@ export default function Login() {
       <div className="Main-wrapper">
         <Profile />
         <ReservationLists />
-        <ReservationDetails />
+        <LoginComponents />
       </div>
 
       <div className="Footer">

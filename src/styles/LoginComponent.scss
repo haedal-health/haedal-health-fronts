@@ -1,0 +1,165 @@
+/* LoginComponents */
+
+$border-color: #00A1F2;
+$bg-color: #FFFFFF;
+$border-radius: 5px;
+
+$input-width: 90%;
+
+.LoginComponents {
+
+  /* LoginComponents-btn */
+  &-btn {
+    position: absolute;
+    width: 80%;
+    height: 58px;
+    bottom: 150px;
+    background: #000000;
+    border-radius: 12px;
+  
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  /* kakaobtn */
+  &-kakaobtn {
+    position: absolute;
+    width: 80%;
+    height: 58px;
+    bottom: 70px;
+    background: #FEE500;
+    border-radius: 12px;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+    }
+
+  
+  
+  /* LoginComponents-input */
+  &-input {
+    box-sizing: border-box;
+    position: absolute;
+    width: $input-width;
+    height: 41px;
+    left: 28px;
+    
+    &:nth-of-type(1) {
+      top: 154px;
+    }
+    
+    &:nth-of-type(2) {
+      top: 236px;
+    }
+  }
+  
+  /* LoginComponents-text */
+  &-text {
+    position: absolute;
+    width: 200px;
+    left: 28px;
+    top: 132px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #010101;
+    
+    &:nth-of-type(2) {
+      left: 28px;
+      top: 213px;
+    }
+    
+    &:nth-of-type(3) {
+      left: 54px;
+      top: 293px;
+    }
+    
+    &:nth-of-type(4) {
+      left: 500px;
+      top: 293px;
+    }
+    
+  
+  }
+  
+  /* LoginComponents-checkbox */
+  &-checkbox {
+    box-sizing: border-box;
+    position: absolute;
+    left: 28px;
+    top: 296px;
+    background: #FFFFFF;
+    border: 1px solid #B3B3B3;
+  }
+}
+
+/* LoginComponents-input */
+.LoginComponents-input{
+box-sizing: border-box;
+
+position: absolute;
+width: $input-width;
+left: 28px;
+top: 154px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 5px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+.textGray{
+  position: absolute;
+  right: 10px;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  
+  color: #B3B3B3;
+  }
+}
+
+/* LoginComponents-checkbox */
+.LoginComponents-checkbox{
+
+box-sizing: border-box;
+
+position: absolute;
+width: 15px;
+height: 15px;
+left: 28px;
+top: 296px;
+
+background: #FFFFFF;
+border: 1px solid #B3B3B3;
+
+}
+
+
