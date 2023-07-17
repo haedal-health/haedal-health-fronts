@@ -88,7 +88,7 @@ $ReservationDetails-wrapper-height: 100%;
   /* ReservationDetails-container */
   .ReservationDetails-container {
   width: 508px;
-  height: 53 + 123px;
+  //height: 53 + 123px;
 
   top: 100px;
 
@@ -131,10 +131,17 @@ left: 2rem;
   .ReservationDetails-item-groups {
   position: relative;
   width: 507px;
-  height: 123px;
+  height: 0;
 
   background: $background-color2;
   border-radius: 5px;
+
+  overflow: hidden;
+  transition: height 0.3s ease;
+  }
+
+  .ReservationDetails-item-groups.expanded {
+    height: 123px;
   }
   
   /* ReservationDetails-item-detail */
