@@ -1,8 +1,15 @@
 import React from "react";
 
 import "../styles/ReservationDetails.scss";
+import PassDetailContainer from "./PassDetailContainer";
 
 export default function ReservationDetails() {
+  const text = "생성";
+  const passtypeText = "예약 등록 - 필라테스 이용권1";
+  const date = "2023-06-09";
+  const time = "13:00~14:00";
+  const trainer = "오영선";
+
   return (
     <div className="ReservationDetails-wrapper ">
       <div className="ReservationDetails-title align-center">
@@ -13,24 +20,10 @@ export default function ReservationDetails() {
         <button className="ReservationDetails-title-btn-groups"> 초기화</button>
       </div>
 
-      <div className="ReservationDetails-container">
-        <div className="ReservationDetails-title-groups ">
-          <span className="ReservationDetails-item-title-text"></span>
-          <button className="ReservationDetails-item-btn">
-            <span className="ReservationDetails-item-btn-text"></span>
-          </button>
-        </div>
-
-        <div className="ReservationDetails-item-groups">
-          <ul className="ReservationDetails-item-detail-text">
-            <li>날짜</li>
-
-            <li>예약 시간</li>
-
-            <li>담당 선생님</li>
-          </ul>
-        </div>
-      </div>
+      {/* 모두 입력하면 자동으로 추가되게 만들어야함 */}
+      {PassDetailContainer(passtypeText, text, date, time, trainer)}
+      {PassDetailContainer(passtypeText, text, date, time, trainer)}
+      {PassDetailContainer(passtypeText, text, date, time, trainer)}
     </div>
   );
 }

@@ -11,9 +11,10 @@ $page-padding: 100px;
 .NavBar-wrapper {
   position: relative;
   width: 100vw;
-  height: 124px;
+  height: 15vh;
+  //height: 124px;
   margin: 0 auto;
-  margin-top: 1rem;
+  //margin-top: 1rem;
 }
 
 
@@ -141,8 +142,8 @@ $page-padding: 100px;
 
   position: relative;
   width: 100%;
-  height: 51px;
-  top: 57px;
+  height: 50%;
+  top: 50%;
 
   padding: 0 100px;
 

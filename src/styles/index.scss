@@ -15,7 +15,19 @@ $page-padding: 100px;
 
 .Main-wrapper{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh; /* 이전에는 100vh였으나 Footer가 차지할 공간을 확보하기 위해 95vh로 수정 */
+ // margin-top: 5rem;
+  overflow: hidden;
+}
+
+.Footer{
+  display: flex;
+  position: relative;
+  height: 5vh;
+  //background-color: #5DBAFF;
   width: 100%;
-  margin-top: 5rem;
-  height: 1vh;
+  justify-content: flex-end; /* Footer를 아래로 정렬하기 위해 flex-end로 설정 */
 }

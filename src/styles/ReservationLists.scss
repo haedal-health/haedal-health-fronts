@@ -1,6 +1,12 @@
 /* ReservationList */
 
-$container-width: 410px;
+$container-width: 410px; //410px
+$container-height: 70%; //572px
+$ReservationList-item-width: 80%; //318px
+$ReservationList-item-height: 40%; //63px
+$padding : 30px;
+$detail: 352px;
+
 
 .font1{
   font-family: 'Noto Sans';
@@ -42,9 +48,12 @@ $container-width: 410px;
 .ReservationList-wrapper {
   position: absolute;
   width: $container-width;
-  height: 572px;
+  height: $container-height;
+  max-height: 600px;
+  min-height: 450px;
   left: 203px;
-  top: 252px;
+  //top: 152px - $padding + $detail ; //252px
+  bottom: 0;
   background: #FFFFFF;
   border: 1px solid #00A1F2;
   border-radius: 5px;
@@ -66,16 +75,16 @@ $container-width: 410px;
   align-items: center;
 
   padding: 0px;
-  gap: 30px;
-  left: calc(50% - 318px/2 - 307px);
-  top: 296px;
+  gap: 2em;
 }
 
 /* ReservationList-item */
 
 .ReservationList-item {
-  width: 318px;
-  height: 63px;
+  width: $ReservationList-item-width;
+  height: $ReservationList-item-height;
+  max-height: 63px;
+  min-height: 30px;
   /* Inside auto layout */
   flex: none;
   order: 0;
@@ -90,8 +99,6 @@ $container-width: 410px;
 .ReservationList-item-text {
   position: absolute;
   width: 226px;
-
-
   text-align: center;
   color: #000000;
 }
