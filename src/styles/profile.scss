@@ -1,0 +1,19 @@
+$container-width: 410px; 
+$container-height: 70%; //572px
+$width : 134px;
+
+.Profile{
+  width: $width;
+  height: 157px;
+  bottom: $container-height;
+  margin: 0 0 20px;
+
+  position: absolute;
+  left: 203px + $container-width/2 - $width/2;
+  display: flex;
+  flex-direction: column;
+  .name{
+    font-size: 17px;
+    text-align: center;
+  }
+}

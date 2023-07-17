@@ -2,6 +2,7 @@ import React from "react";
 import ReservationLists from "../components/ReservationLists";
 import ReservationDetails from "../components/ReservationDetails";
 import Footer from "../components/Footer";
+import Profile from "../components/Profile";
 
 import "../styles/index.scss";
 
@@ -9,6 +10,7 @@ export default function Login() {
   return (
     <div>
       <div className="Main-wrapper">
+        <Profile />
         <ReservationLists />
         <ReservationDetails />
       </div>
