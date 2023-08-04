@@ -36,7 +36,7 @@ export default function ApiTest() {
 
   const fetchData = async () => {
     try {
-      const response = await apiRoot.get("booking/api/hello", {
+      const response = await apiRoot.get("booking/", {
         withCredentials: true,
       });
       if (!response.data) {
@@ -55,15 +55,16 @@ export default function ApiTest() {
       <h2>Booking Data:</h2>
       {bookingData.length > 0 ? (
         <ul>
-          <h1>{bookingData}</h1>
-          {bookingDataDummy.map((booking, index) => (
+          <h1>도착!</h1>
+          {/* <h1>{bookingData}</h1> */}
+          {/* {bookingDataDummy.map((booking, index) => (
             <li key={index}>
               <p>Booking ID: {booking.bookingId}</p>
               <p>Teacher: {booking.teacher}</p>
               <p>Start Time: {booking.startTime}</p>
               <p>End Time: {booking.endedTime}</p>
             </li>
-          ))}
+          ))} */}
         </ul>
       ) : (
         <p>Loading...</p>

@@ -15,9 +15,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <NavBar />
+      <ApiTest />
       <Login />
       <MyPage />
-      <ApiTest />
     </BrowserRouter>
   </React.StrictMode>
 );
