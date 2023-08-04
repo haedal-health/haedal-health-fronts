@@ -10,13 +10,23 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.7.0",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "http-proxy-middleware": "^2.0.6",
+    "kakao-sdk": "^3.1.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "reselect": "^4.1.8",
     "web-vitals": "^2.1.4"
   },
+
+  "proxy": "http://localhost:8080/",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -4,6 +4,16 @@ import "../styles/ReservationDetails.scss";
 import PassDetailContainer from "./PassDetailContainer";
 
 export default function ReservationDetails() {
+
+/*
+    "count": 0,
+    "endedDay": "2023-07-26T04:39:15.753Z",
+    "id": 0,
+    "name": "string",
+    "price": 0,
+    "startedDay": "2023-07-26T04:39:15.753Z"
+*/
+
   const text = "생성";
   const passtypeText = "예약 등록 - 필라테스 이용권1";
   const date = "2023-06-09";

@@ -56,10 +56,6 @@ $ReservationDetails-wrapper-height: 100%;
   flex-direction: column;
 }
 
-/* ReservationDetails */
-.ReservationDetails {
-  
-}
   
   /* ReservationDetails-wrapper */
   .ReservationDetails-wrapper {
@@ -69,7 +65,7 @@ $ReservationDetails-wrapper-height: 100%;
     height: $ReservationDetails-wrapper-height;
     min-height:  430px - $padding; //648px
     max-height: 1400px;
-    max-width: 700px;
+    max-width: 650px;
     left: 681px;
     //top: 46px;
     bottom: 0;
@@ -166,8 +162,12 @@ left: 2rem;
     top: 1rem;
     left: 5rem;
     line-height: 150%;
-    width: 300px;
+
     height: 20px;
+
+    .text{
+      
+    }
   }
   
   
@@ -224,12 +224,12 @@ left: 2rem;
     list-style: none;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
 
     .item-title {
       font-size: 14px;
       font-weight: none;
       margin-right: 50px;
-      width: 100px;
+      width: 80px;
     }
   }

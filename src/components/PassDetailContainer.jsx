@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 
 import "../styles/ReservationDetails.scss";
-export default function PassDetailContainer(
-  passtypeText,
-  text,
-  date,
-  time,
-  trainer
-) {
+
+
+export default function PassDetailContainer(passtypeText, text) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [date, setDate] = useState(false);
+  const [name, setName] = useState(false);
+  const [time, setTime] = useState(false);
+
+  /*
+  Long id;
+  String name;
+  Integer count;
+  Integer price;
+  LocalDateTime startedDay;
+  LocalDateTime endedDay;
+*/
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
@@ -34,18 +42,34 @@ export default function PassDetailContainer(
             isExpanded ? "expanded" : ""
           }`}
         >
-          <ul class="ReservationDetails-item-detail-text">
+          <ul className="ReservationDetails-item-detail-text">
             <li>
-              <span class="item-title">날짜</span>
-              {date}
+              <span className="item-title">날짜</span>
+              <input
+                type="text"
+                value={date}
+                onChange={(e) => {
+                  setDate(e.target.value);
+                  console.log("변경:", e.target.value);
+                }}
+              />
             </li>
             <li>
-              <span class="item-title">예약 시간</span>
-              {time}
+              <span className="item-title">예약 시간</span>
+              <input
+                type="text"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+              />
             </li>
             <li>
-              <span class="item-title">담당 선생님</span>
-              {trainer} 트레이너
+              <span className="item-title">담당 선생님</span>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />{" "}
+              트레이너
             </li>
           </ul>
         </div>

@@ -7,6 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Login from "./pages/Login";
+import MyPage from "./pages/MyPage";
+import ApiTest from "./pages/ApiTest";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +16,8 @@ root.render(
     <BrowserRouter>
       <NavBar />
       <Login />
+      <MyPage />
+      <ApiTest />
     </BrowserRouter>
   </React.StrictMode>
 );
