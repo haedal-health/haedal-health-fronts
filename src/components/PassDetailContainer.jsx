@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import "../styles/ReservationDetails.scss";
 
-
 export default function PassDetailContainer(passtypeText, text) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [date, setDate] = useState(false);

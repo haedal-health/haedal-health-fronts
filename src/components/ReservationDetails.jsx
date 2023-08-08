@@ -4,8 +4,9 @@ import "../styles/ReservationDetails.scss";
 import PassDetailContainer from "./PassDetailContainer";
 
 export default function ReservationDetails() {
+  const URL = "kakkoLogin/booking/";
 
-/*
+  /*
     "count": 0,
     "endedDay": "2023-07-26T04:39:15.753Z",
     "id": 0,

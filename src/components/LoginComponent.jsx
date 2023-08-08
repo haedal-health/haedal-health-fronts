@@ -8,8 +8,9 @@ export default function LoginComponents() {
   const imgSrcKakao = "/img/kakaobtn-img.png";
   const REST_API_KEY = "b5d91872e5fa2c8c0a684e8f5c696e16";
   // const REDIRECT_URI = "http://localhost:3000/kakaoLogin";
-  const REDIRECT_URI = "http://localhost:8080/login/oauth2/code/kakao";
-  const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+  const REDIRECT_URI = "http://localhost:8080/kakao";
+  // const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+  const link = REDIRECT_URI;
 
   // const code = window.location.search; // code?=이상한코드가한가득
   const code = "b5d91872e5fa2c8c0a684e8f5c696e16";
