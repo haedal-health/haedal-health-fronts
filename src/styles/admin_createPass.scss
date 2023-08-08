@@ -1,37 +1,71 @@
+$ReservationDetails-wrapper-width: 100%;
+$ReservationDetails-wrapper-height: 100%;
+$page-padding: 100px;
+$padding: 60px;
+
+$viewportWidth: 1024px;
+$viewportHeight: 768px;
+
+@function toVh($value, $viewportHeight) {
+  @return (100 / $viewportHeight) * $value * 1vh;
+}
+
+@function toVw($value, $viewportWidth) {
+  @return (100 / $viewportWidth) * $value * 1vw;
+}
+
+
 /* createPass-container */
 .createPass-container {
-  box-sizing: border-box;
   position: absolute;
-  width: 571px;
-  height: 778px;
-  left: 116px;
-  top: 258px;
+  width: $ReservationDetails-wrapper-width;
+  height: $ReservationDetails-wrapper-height;
+  min-height:  400px - $padding; //648px
+  max-height: 1400px;
+  max-width: 650px;
+  left: 681px;
+  bottom: 0;
   background: #FFFFFF;
   border: 1px solid #00A1F2;
   border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
 }
+
+.createPass-items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  // gap: 10px;
+}
+
 
 /* createPass-item */
 .createPass-item {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  position: relative;
   padding: 0px;
-  gap: 18px;
-  position: absolute;
-  width: 472px;
-  height: 562px;
-  left: 54px;
-  top: 48px;
+  width: 100%;
+  height: 41px;
+  margin-bottom: 10px;
+
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.createPass-item:nth-child(12) {
+  height: 100px; /* 원하는 크기로 조정하세요 */
 }
 
 /* createPass-item-text */
 .createPass-item-text {
-  position: absolute;
-  width: 46px;
+  position: relative;
+  width: 120px;
   height: 22px;
-  left: 0px;
-  top: 0px;
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
@@ -47,8 +81,8 @@
   position: absolute;
   width: 68.74px;
   height: 41px;
-  left: 457.65px;
-  top: 650px;
+  bottom: 20px;
+  right: 20px;
   background: #00A1F2;
   border-radius: 5px;
   display: flex;
@@ -63,8 +97,8 @@
   position: absolute;
   width: 102.74px;
   height: 41px;
-  left: 332px;
-  top: 650px;
+  right: 110px;
+  bottom: 20px;
   background: #000000;
   border-radius: 5px;
   display: flex;

@@ -18,9 +18,9 @@ $page-padding: 100px;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 80vh; /* 이전에는 100vh였으나 Footer가 차지할 공간을 확보하기 위해 95vh로 수정 */
+  height: 90vh; /* 이전에는 100vh였으나 Footer가 차지할 공간을 확보하기 위해 95vh로 수정 */
  // margin-top: 5rem;
-  overflow: hidden;
+  margin-top: 5vh;
 }
 
 .Footer{
