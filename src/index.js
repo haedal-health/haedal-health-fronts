@@ -2,22 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/index.scss";
 import reportWebVitals from "./reportWebVitals";
-
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Login from "./pages/Login";
 import MyPage from "./pages/MyPage";
 import ApiTest from "./pages/ApiTest";
+import Proxy from "./pages/Proxy";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <NavBar />
-      <ApiTest />
-      <Login />
-      <MyPage />
+      <Routes>
+        <Route path="/apis" element={<ApiTest />}></Route>
+        <Route path="/kakkoLogin" element={<ApiTest />}></Route>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/proxy" element={<Proxy />}></Route>
+        <Route path="/mypage" element={<MyPage />}></Route>
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
