@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
+import KakkoLogin from "./pages/KakkoLogin";
 import Login from "./pages/Login";
 import MyPage from "./pages/MyPage";
 import ApiTest from "./pages/ApiTest";
@@ -17,7 +18,7 @@ root.render(
       <NavBar />
       <Routes>
         <Route path="/apis" element={<ApiTest />}></Route>
-        <Route path="/kakkoLogin" element={<ApiTest />}></Route>
+        <Route path="/kakkoLogin" element={<KakkoLogin />}></Route>
         <Route path="/" element={<Login />}></Route>
         <Route path="/proxy" element={<Proxy />}></Route>
         <Route path="/mypage" element={<MyPage />}></Route>
