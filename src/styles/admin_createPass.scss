@@ -1,0 +1,75 @@
+/* createPass-container */
+.createPass-container {
+  box-sizing: border-box;
+  position: absolute;
+  width: 571px;
+  height: 778px;
+  left: 116px;
+  top: 258px;
+  background: #FFFFFF;
+  border: 1px solid #00A1F2;
+  border-radius: 5px;
+}
+
+/* createPass-item */
+.createPass-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 18px;
+  position: absolute;
+  width: 472px;
+  height: 562px;
+  left: 54px;
+  top: 48px;
+}
+
+/* createPass-item-text */
+.createPass-item-text {
+  position: absolute;
+  width: 46px;
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #010101;
+}
+
+/* createPass-createBtn */
+.createPass-createBtn {
+  position: absolute;
+  width: 68.74px;
+  height: 41px;
+  left: 457.65px;
+  top: 650px;
+  background: #00A1F2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F1F2F3;
+  cursor: pointer;
+}
+
+/* createPass-AddClientBtn */
+.createPass-AddClientBtn {
+  position: absolute;
+  width: 102.74px;
+  height: 41px;
+  left: 332px;
+  top: 650px;
+  background: #000000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F1F2F3;
+  cursor: pointer;
+}
