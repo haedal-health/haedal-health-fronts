@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const URL = "booking/";
+const URL = "kakkoLogin/booking/";
 
-const bookingDataDummy = [
-  {
-    bookingId: 0,
-    endedTime: "2023-08-04T03:49:38.068Z",
-    passId: 0,
-    startTime: "2023-08-04T03:49:38.068Z",
-    teacher: "string",
-    userId: 0,
-  },
-];
+// const bookingDataDummy = [
+//   {
+//     bookingId: 0,
+//     endedTime: "2023-08-04T03:49:38.068Z",
+//     passId: 0,
+//     startTime: "2023-08-04T03:49:38.068Z",
+//     teacher: "string",
+//     userId: 0,
+//   },
+// ];
 
 const apiRoot = axios.create({
   baseURL: "http:localhost:3000/",
@@ -20,44 +20,45 @@ const apiRoot = axios.create({
 });
 
 export default function ApiTest() {
-  const [bookingData, setBookingData] = useState([]); // Define bookingData state here
+  const [bookingData, setBookingData] = useState([]);
   const [check, setCheck] = useState("");
   const [hello, setHello] = useState("");
 
   useEffect(() => {
     // fetchDataCheck();
-    // fetchData(); // proxy확인용
+    fetchData(); // proxy확인용
   }, []);
 
-  useEffect(() => {
-    // 실제 URL로 대체
-    const apiUrl = "http://localhost:3000/booking/api/hello";
+  /* 체크용 코드 */
+  // useEffect(() => {
+  //   // 실제 URL로 대체
+  //   const apiUrl = "http://localhost:3000/booking/api/hello";
 
-    axios
-      .get(apiUrl)
-      .then((response) => {
-        if (response.status === 302) {
-          // 리다이렉션 처리
-          const newUrl = response.headers["location"];
-          axios
-            .get(newUrl)
-            .then((newResponse) => {
-              setCheck(newResponse.data);
-            })
-            .catch((error) => {
-              console.error(
-                "리다이렉트된 데이터를 가져오는 중 오류 발생:",
-                error
-              );
-            });
-        } else {
-          setCheck(response.data);
-        }
-      })
-      .catch((error) => {
-        console.error("데이터를 가져오는 중 오류 발생:", error);
-      });
-  }, []);
+  //   axios
+  //     .get(apiUrl)
+  //     .then((response) => {
+  //       if (response.status === 302) {
+  //         // 리다이렉션 처리
+  //         const newUrl = response.headers["location"];
+  //         axios
+  //           .get(newUrl)
+  //           .then((newResponse) => {
+  //             setCheck(newResponse.data);
+  //           })
+  //           .catch((error) => {
+  //             console.error(
+  //               "리다이렉트된 데이터를 가져오는 중 오류 발생:",
+  //               error
+  //             );
+  //           });
+  //       } else {
+  //         setCheck(response.data);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error("데이터를 가져오는 중 오류 발생:", error);
+  //     });
+  // }, []);
 
   // useEffect(() => {
   //   axios
@@ -87,9 +88,6 @@ export default function ApiTest() {
       const response = await axios.get(URL, {
         withCredentials: true,
       });
-      // const response = await apiRoot.get(URL, {
-      //   withCredentials: true,
-      // });
       console.log(response.data);
       if (!response.data) {
         throw new Error("Failed to fetch data from the server");
@@ -102,24 +100,39 @@ export default function ApiTest() {
     }
   };
 
+  const PostData = async () => {
+    try {
+      const data = {
+        passId: 3,
+        userId: 1,
+      };
+
+      const res = await axios.post(URL, data, {
+        withCredentials: true,
+      });
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <h2>Booking Data:</h2>
-      <div> 백엔드에서 가져온 데이터입니다 hello : {hello}</div>
-      <div> 백엔드에서 가져온 데이터입니다 : {bookingData.bookingId}</div>
+      <button onClick={PostData}>POST Data</button>
       {bookingData.length > 0 ? (
         <ul>
-          <h1>{bookingData}</h1>
           <div> 백엔드에서 가져온 데이터입니다 hello : {hello}</div>
           <div> 백엔드에서 가져온 데이터입니다 check : {check}</div>
-          {/* {bookingDataDummy.map((booking, index) => (
+          {bookingData.map((bookingData, index) => (
             <li key={index}>
-              <p>Booking ID: {booking.bookingId}</p>
-              <p>Teacher: {booking.teacher}</p>
-              <p>Start Time: {booking.startTime}</p>
-              <p>End Time: {booking.endedTime}</p>
+              <p>Booking ID: {bookingData.bookingId}</p>
+              <p>Teacher: {bookingData.teacher}</p>
+              <p>Start Time: {bookingData.startTime}</p>
+              <p>End Time: {bookingData.endedTime}</p>
             </li>
-          ))} */}
+          ))}
         </ul>
       ) : (
         <p>Loading...</p>
