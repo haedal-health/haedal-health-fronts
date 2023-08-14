@@ -11,8 +11,8 @@ export default function MyPage() {
       <div className="Main-wrapper">
         <Profile />
         <ReservationLists />
-        <Admin_createPass />
-        {/* <ReservationDetails /> */}
+        {/* <Admin_createPass /> */}
+        <ReservationDetails />
       </div>
 
       <div className="Footer">
