@@ -15,8 +15,6 @@ export default function PassDetailContainer({ bookingData, pass }) {
     setIsExpanded(!isExpanded);
   };
 
-  // console.log("check pass");
-  // console.log(pass);
   console.log("들어온 bookingData");
   console.log(bookingData);
 
@@ -73,17 +71,19 @@ export default function PassDetailContainer({ bookingData, pass }) {
                   : "달력으로 입력 필요"}
               </span>
             </li>
-            {bookingData && bookingData.startTime && bookingData.endedTime && (
+            {
               <li>
                 <span className="item-title">예약 시간</span>
                 <span>
-                  {formatDateTimeRange(
-                    bookingData.startTime,
-                    bookingData.endedTime
-                  )}
+                  {bookingData && bookingData.startTime && bookingData.endedTime
+                    ? formatDateTimeRange(
+                        bookingData.startTime,
+                        bookingData.endedTime
+                      )
+                    : "입력 필요"}
                 </span>
               </li>
-            )}
+            }
             {bookingData && bookingData.teacher && (
               <li>
                 <span className="item-title">담당 선생님</span>
