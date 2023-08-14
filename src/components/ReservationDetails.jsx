@@ -75,7 +75,6 @@ export default function ReservationDetails() {
 
         <button className="ReservationDetails-title-btn-groups"> 초기화</button>
       </div>
-      {/* 모두 입력하면 자동으로 추가되게 만들어야함 */}
       {bookingDataAry !== null && (
         <div>
           <PassDetailContainer bookingData={bookingDataAry[0]} />
