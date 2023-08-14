@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const URL = "kakkoLogin/booking/";
+const URL = "booking/";
 
 // const bookingDataDummy = [
 //   {
@@ -16,89 +16,65 @@ const URL = "kakkoLogin/booking/";
 
 const apiRoot = axios.create({
   baseURL: "http:localhost:3000/",
-  withCredentials: true, // Set this to true to include credentials (cookies) in the request 여기 추가함
+  withCredentials: true,
 });
 
 export default function ApiTest() {
   const [bookingData, setBookingData] = useState([]);
+  const [bookingDataAry, setBookingDataAry] = useState([]);
+  const [pass, setPass] = useState([]);
+
+  const [loading, setLoading] = useState(false);
   const [check, setCheck] = useState("");
   const [hello, setHello] = useState("");
 
-  useEffect(() => {
-    // fetchDataCheck();
-    fetchData(); // proxy확인용
-  }, []);
-
-  /* 체크용 코드 */
-  // useEffect(() => {
-  //   // 실제 URL로 대체
-  //   const apiUrl = "http://localhost:3000/booking/api/hello";
-
-  //   axios
-  //     .get(apiUrl)
-  //     .then((response) => {
-  //       if (response.status === 302) {
-  //         // 리다이렉션 처리
-  //         const newUrl = response.headers["location"];
-  //         axios
-  //           .get(newUrl)
-  //           .then((newResponse) => {
-  //             setCheck(newResponse.data);
-  //           })
-  //           .catch((error) => {
-  //             console.error(
-  //               "리다이렉트된 데이터를 가져오는 중 오류 발생:",
-  //               error
-  //             );
-  //           });
-  //       } else {
-  //         setCheck(response.data);
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error("데이터를 가져오는 중 오류 발생:", error);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("booking/api/hello")
-  //     .then((response) => setHello(response.data))
-  //     .catch((error) => console.log(error));
-  // }, []);
-
-  const fetchDataCheck = async () => {
+  async function fetchDataPass() {
+    console.log("Fetching data...");
     try {
-      const response = axios.get("/booking/api/hello", {
+      const response = await axios.get("/pass?page=1&size=4&sort=startedDay", {
         withCredentials: true,
       });
+
       if (!response.data) {
         throw new Error("Failed to fetch data from the server");
       }
-      setCheck(response.data);
       console.log(response.data);
+      setPass((predata) => response.data);
+      console.log("pass");
+      console.log(pass);
+      setLoading((preloading) => true);
     } catch (error) {
       console.error(error);
-    }
-  };
+    } ///
+  }
 
-  const fetchData = async () => {
-    console.log("hi1");
+  async function fetchData() {
+    console.log("Fetching data...");
     try {
       const response = await axios.get(URL, {
         withCredentials: true,
       });
-      console.log(response.data);
+
       if (!response.data) {
         throw new Error("Failed to fetch data from the server");
       }
-      console.log(response.data);
-      setBookingData(response.data);
+      const data = response.data.content;
+      setBookingData((predata) => response.data);
+      setBookingDataAry((predata) => response.data.content);
+      console.log("bookingDataAry");
+      console.log(bookingDataAry);
+      setLoading((preloading) => true);
     } catch (error) {
-      console.log("error");
       console.error(error);
-    }
-  };
+    } ///
+  }
+
+  useEffect(() => {
+    fetchData();
+    // fetchDataCheck();
+    fetchDataPass();
+    console.log(bookingData);
+  }, [loading]);
 
   const PostData = async () => {
     try {
@@ -119,9 +95,19 @@ export default function ApiTest() {
 
   return (
     <div>
-      <h2>Booking Data:</h2>
+      <h2>Booking Data: {bookingDataAry.bookingId}</h2>
+      <div> 백엔드에서 가져온 데이터입니다 pass : {pass.content.id}</div>
+      {bookingDataAry.map((bookingData, index) => (
+        <li key={index}>
+          <p>Booking ID: {bookingData.bookingId}</p>
+          <p>Teacher: {bookingData.teacher}</p>
+          <p>Start Time: {bookingData.startTime}</p>
+          <p>End Time: {bookingData.endedTime}</p>
+        </li>
+      ))}
+
       <button onClick={PostData}>POST Data</button>
-      {bookingData.length > 0 ? (
+      {/* /{bookingData.bookingId > 0 ? (
         <ul>
           <div> 백엔드에서 가져온 데이터입니다 hello : {hello}</div>
           <div> 백엔드에서 가져온 데이터입니다 check : {check}</div>
@@ -136,7 +122,7 @@ export default function ApiTest() {
         </ul>
       ) : (
         <p>Loading...</p>
-      )}
+      )} */}
     </div>
   );
 }
