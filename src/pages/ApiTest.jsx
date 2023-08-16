@@ -3,17 +3,6 @@ import axios from "axios";
 
 const URL = "booking/";
 
-// const bookingDataDummy = [
-//   {
-//     bookingId: 0,
-//     endedTime: "2023-08-04T03:49:38.068Z",
-//     passId: 0,
-//     startTime: "2023-08-04T03:49:38.068Z",
-//     teacher: "string",
-//     userId: 0,
-//   },
-// ];
-
 const apiRoot = axios.create({
   baseURL: "http:localhost:3000/",
   withCredentials: true,
@@ -23,10 +12,7 @@ export default function ApiTest() {
   const [bookingData, setBookingData] = useState([]);
   const [bookingDataAry, setBookingDataAry] = useState([]);
   const [pass, setPass] = useState([]);
-
   const [loading, setLoading] = useState(false);
-  const [check, setCheck] = useState("");
-  const [hello, setHello] = useState("");
 
   async function fetchDataPass() {
     console.log("Fetching data...");
@@ -38,14 +24,13 @@ export default function ApiTest() {
       if (!response.data) {
         throw new Error("Failed to fetch data from the server");
       }
-      console.log(response.data);
       setPass((predata) => response.data);
       console.log("pass");
       console.log(pass);
       setLoading((preloading) => true);
     } catch (error) {
       console.error(error);
-    } ///
+    }
   }
 
   async function fetchData() {
