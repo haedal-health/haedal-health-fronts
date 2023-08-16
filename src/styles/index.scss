@@ -20,6 +20,8 @@ $page-padding: 100px;
   width: 100vw;
   height: 90vh; /* 이전에는 100vh였으나 Footer가 차지할 공간을 확보하기 위해 95vh로 수정 */
  // margin-top: 5rem;
+  max-width: 1024px;
+
   margin-top: 5vh;
 }
 
