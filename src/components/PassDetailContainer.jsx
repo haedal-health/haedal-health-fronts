@@ -15,12 +15,10 @@ export default function PassDetailContainer({ bookingData, pass }) {
     setIsExpanded(!isExpanded);
   };
 
-  console.log("들어온 bookingData");
-  console.log(bookingData);
-
   useEffect(() => {
-    // setName(bookingData.teacher);
-  });
+    console.log("들어온 bookingData");
+    console.log(bookingData);
+  }, [bookingData]);
 
   function formatDateTimeRange(start, end) {
     const [startYear, startMonth, startDay, startHour, startMinute] = start;

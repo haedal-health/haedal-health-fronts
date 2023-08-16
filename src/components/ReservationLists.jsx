@@ -16,14 +16,19 @@ export default function ReservationLists() {
   const [bookingDataAry, setBookingDataAry] = useState([]);
 
   useEffect(() => {
-    fetchData();
-    fetchDataPass();
-    console.log(bookingData);
+    // fetchData();
+    // fetchDataPass();
+    // console.log(bookingData);
   }, [loading]);
 
   async function fetchDataPass() {
     console.log("Fetching data...");
     try {
+      const instance = axios.create({
+        baseURL: "/booking",
+        withCredentials: true,
+      });
+
       const response = await axios.get("/pass?page=1&size=4&sort=startedDay", {
         withCredentials: true,
       });

@@ -1,43 +1,27 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const URL = "booking/";
-
-const JsonBookingResource = (() => {
-  // const [bookingData, setBookingData] = useState([]);
-  // const [bookingDataAry, setBookingDataAry] = useState([]);
-  // const [loading, setLoading] = useState(false);
-
-  const instance = axios.create({
-    baseURL: "/booking",
+const JsonBookingResource = {
+  instance: axios.create({
+    baseURL: "/",
     withCredentials: true,
-  });
+  }),
+  fetchBooking: async () => {
+    const response = await JsonBookingResource.instance.get("/booking");
+    return response.data;
+  },
 
-  // useEffect(() => {
-  //   fetchBooking();
-  // }, []);
+  fetchBookingId: async (number) => {
+    const response = await JsonBookingResource.instance.get(
+      `/booking/${number}`
+    );
+    return response.data;
+  },
 
-  const fetchBooking = async () => {
-    return (await instance.get("/booking")).data;
-    // try {
-    //   // setBookingData(bookingData);
-    //   // setBookingDataAry(bookingData.content);
-
-    //   console.log(bookingData);
-    //   // console.log(bookingDataAry);
-    // } catch (error) {
-    //   console.error(error);
-    // }
-  };
-
-  const fetchBookingAry = async () => {
-    return (await instance.get("/booking")).data.content;
-  };
-
-  return {
-    booking: fetchBooking,
-    bookingAry: fetchBookingAry,
-  };
-})();
+  fetchBookingAry: async () => {
+    const response = await JsonBookingResource.instance.get("/booking/");
+    return response.data.content;
+  },
+};
 
 export default JsonBookingResource;
