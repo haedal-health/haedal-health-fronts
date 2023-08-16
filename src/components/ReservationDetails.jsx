@@ -33,7 +33,6 @@ export default function ReservationDetails() {
   const [passtypeText, setPasstypeText] = useState([]);
 
   // useEffect(() => {}, [loading]);
-
   const text = "생성";
 
   return (

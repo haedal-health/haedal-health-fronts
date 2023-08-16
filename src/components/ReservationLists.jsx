@@ -10,8 +10,6 @@ import renderPassType from "./PassType";
 import JsonPassResource from "../apis/axiosPassApi";
 
 const pass = await JsonPassResource.fetchPassContent();
-console.log("pass.name");
-console.log(pass);
 
 export default function ReservationLists() {
   const URL = "booking/";

@@ -8,8 +8,18 @@ $background-color2:#EAF4FC;
 $page-padding: 100px;
 $padding: 60px;
 
-$ReservationDetails-wrapper-width: 100%;
-$ReservationDetails-wrapper-height: 100%;
+$ReservationDetails-wrapper-width: 530px;
+
+$viewportWidth: 1024px;
+$viewportHeight: 768px;
+
+
+@function toVw($value, $viewportWidth) {
+  @return (100 / $viewportWidth) * $value * 1vw;
+}
+$ReservationDetails-wrapper-width-vw: toVw($ReservationDetails-wrapper-width, $viewportWidth);
+
+$ReservationDetails-wrapper-height: 90vh;
 
 .titlefont1{
 
@@ -61,12 +71,12 @@ $ReservationDetails-wrapper-height: 100%;
   .ReservationDetails-wrapper {
     box-sizing: border-box;
     position: absolute;
-    width: $ReservationDetails-wrapper-width;
+    width: $ReservationDetails-wrapper-width-vw;
     height: $ReservationDetails-wrapper-height;
     min-height:  400px - $padding; //648px
     max-height: 1400px;
     max-width: 650px;
-    left: 681px;
+    left: 400px;
     //top: 46px;
     bottom: 0;
     background: #FFFFFF;
@@ -83,7 +93,7 @@ $ReservationDetails-wrapper-height: 100%;
   
   /* ReservationDetails-container */
   .ReservationDetails-container {
-  width: 508px;
+  width: 80%;
   top: 100px;
   margin: 0px 0 10px;
 
@@ -93,7 +103,7 @@ $ReservationDetails-wrapper-height: 100%;
   /* ReservationDetails-title */
 .ReservationDetails-title{
 position: absolute;
-width: $ReservationDetails-wrapper-width;
+width: 100%;
 height: 57px;
 left: 0px;
 top: 0px;

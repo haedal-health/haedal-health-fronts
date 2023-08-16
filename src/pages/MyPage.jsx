@@ -12,7 +12,7 @@ export default function MyPage() {
         <Profile />
         <ReservationLists />
         {/* <Admin_createPass /> */}
-        <ReservationDetails />
+        {/* <ReservationDetails /> */}
       </div>
 
       <div className="Footer">

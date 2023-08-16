@@ -15,7 +15,7 @@ const JsonPassResource = {
 
   fetchPassContent: async () => {
     const response = await JsonPassResource.instance.get(
-      "/pass?page=1&size=4&sort=startedDay"
+      "/pass?page=1&size=5&sort=startedDay"
     );
     return response.data.content;
   },
