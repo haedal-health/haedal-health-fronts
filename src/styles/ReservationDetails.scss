@@ -70,7 +70,7 @@ $ReservationDetails-wrapper-height: 90vh;
   /* ReservationDetails-wrapper */
   .ReservationDetails-wrapper {
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
     width: $ReservationDetails-wrapper-width-vw;
     height: $ReservationDetails-wrapper-height;
     min-height:  400px - $padding; //648px
