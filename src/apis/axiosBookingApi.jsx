@@ -36,6 +36,13 @@ const JsonBookingResource = {
     );
     return response.data.content;
   },
+
+  fetchGetBookingtoUserAry: async (passId, userId) => {
+    const response = await JsonBookingResource.instance.get(
+      `/booking?pass=${passId}&&user=${userId}`
+    );
+    return response.data.content;
+  },
 };
 
 export default JsonBookingResource;

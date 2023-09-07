@@ -6,20 +6,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/ReservationLists.scss";
-import renderPassType from "./PassType";
-import JsonPassResource from "../apis/axiosPassApi";
+import PassType from "./PassType";
+import JsonBookingResource from "../apis/axiosBookingApi";
 
-const pass = await JsonPassResource.fetchPassContent();
+//Id로 가져오도록 바꿈
+const pass = await JsonBookingResource.fetchBookingUserAry(1);
 
 export default function ReservationLists() {
-  const URL = "booking/";
   const [passes, setPass] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setPass((pre) => pass);
+    console.log("passes 업데이트 완료후 종료됩니다");
     console.log(passes);
-  }, []);
+  }, [passes]);
 
   return (
     <div className="ReservationList-wrapper">
@@ -30,10 +30,10 @@ export default function ReservationLists() {
       <button className="ReservationList-rightBtn ReservationList">
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
-
       <div className="ReservationList-container">
-        {pass.map((item, index) => (
-          <div key={index}>{renderPassType(item.name)}</div>
+        {/* <PassType item={passes} /> */}
+        {passes.map((item, index) => (
+          <div key={index}>{<PassType item={item} />}</div>
         ))}
       </div>
     </div>
